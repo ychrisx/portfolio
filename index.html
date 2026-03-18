@@ -1,5 +1,5 @@
 <!DOCTYPE html> 
-<html lang="pt"> 
+<html lang="pt-br"> 
 
 <head>
     <meta charset="UTF-8"> 
@@ -55,6 +55,7 @@
         body {
             overflow-x: hidden;
         }
+
     </style>
 </head>
 
@@ -113,23 +114,29 @@
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 justify-items-center">
 
+            <a href="#quem" class="block">
                 <div class="bg-white border border-purple-400 p-6 rounded-lg hover:bg-purple-100 shadow-md hover:shadow-lg transition">
                     <h2 class="font-bold mb-2">Quem sou eu?</h2>
                     <div class="w-full h-[1px] bg-purple-400 mb-3"></div>
-                    <p>Um poquinho de mim.</p>
+                    <p>Um pouquinho de mim.</p>
                 </div>
+            </a>
 
+            <a href="#projetos" class="block">
                 <div class="bg-white border border-purple-400 p-6 rounded-lg hover:bg-purple-100 shadow-md hover:shadow-lg transition">
                     <h2 class="font-bold mb-2">Projetos</h2>
                     <div class="w-full h-[1px] bg-purple-400 mb-3"></div>
                     <p>Todos meus repositórios do GitHub e um pouco mais.</p>
                 </div>
+            </a>
 
+            <a href="#contatos" class="block">
                 <div class="bg-white border border-purple-400 p-6 rounded-lg hover:bg-purple-100 shadow-md hover:shadow-lg transition">
                     <h2 class="font-bold mb-2">Contato</h2>
                     <div class="w-full h-[1px] bg-purple-400 mb-3"></div>
                     <p>Entre em contato comigo!</p>
                 </div>
+            </a>
 
             </div>
 
@@ -145,9 +152,11 @@
 
     <section class="min-h-screen px-6 py-20">
 
-        <div id="quem" class="max-w-4xl mx-auto mb-20">
+        <div class="max-w-4xl mx-auto mb-20">
             
-            <h2 class="text-purple-500 font-bold mb-6 text-lg">QUEM SOU EU?</h2>
+            <h2 id="quem" class="text-purple-500 font-bold mb-6 text-lg">
+                QUEM SOU EU?
+            </h2>
 
             <div class="mb-6 flex justify-center">
                 <img src="https://media.licdn.com/dms/image/v2/D4D03AQHicSNAp2qggw/profile-displayphoto-crop_800_800/B4DZyfJqd2JEAI-/0/1772196638547?e=1775692800&v=beta&t=LlQObKyZPch_itCYCBtrq2YzZs5pBQhaUxfGmojRhpE" class="w-40 h-40 rounded-full object-cover border-2 border-purple-400">
@@ -167,23 +176,27 @@
 
         </div>
 
-        <div id="projetos" class="max-w-4xl mx-auto mb-20">
+        <div class="max-w-4xl mx-auto mb-20">
 
-            <h2 class="text-purple-500 font-bold mb-6 text-lg">PROJETOS</h2>
+            <h2 id="projetos" class="text-purple-500 font-bold mb-6 text-lg">
+                PROJETOS
+            </h2>
 
             <a href="https://github.com/ychrisx/portfolio" target="_blank"
             class="block bg-white border border-purple-400 p-6 rounded-lg hover:bg-purple-100 transition">
 
                 <h3 class="text-purple-500 font-bold">ychrisx/portfolio</h3>
-                <p class="text-gray-700">Repositório deste site. Dê uma olhada para ver como ele foi feito!</p>
+                <p class="text-gray-700">Repositório deste portfólio. Dê uma olhada para ver como ele foi feito!</p>
 
             </a>
 
         </div>
 
-        <div id="contatos" class="max-w-4xl mx-auto">
+        <div class="max-w-4xl mx-auto mb-20">
 
-            <h2 class="text-purple-500 font-bold mb-6 text-lg">CONTATOS</h2>
+            <h2 id="contatos" class="text-purple-500 font-bold mb-6 text-lg">
+                CONTATOS
+            </h2>
 
             <div class="space-y-2 text-gray-800">
 
@@ -216,5 +229,5 @@
     <footer class="w-full text-center py-6 text-gray-500 text-sm">
         © yChrisx 2026
     </footer>
-</body>
+    </body>
 </html>
