@@ -9,9 +9,6 @@ Ele me deu uma ajudada e umas inspirações também para meu portfólio e
 me indicou um site chamado "vercel", que provavelmente vou colocar o
 portfólio lá. Depois coloco o link por aqui.
  
-Fui escrevendo o código junto com IA, para poder pegar o "escrever" e também para
-ver como tudo funciona :)
-
 O código sem nada escrito está em index.html
 
 O código com anotações está em chris.html (o que usei para "estudar")
