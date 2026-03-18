@@ -8,7 +8,7 @@ https://portfolio-ychrisx.vercel.app/
  
 O código sem nada escrito está em index.html
 
-O código com anotações está em chris.html
+O código com anotações está em chris.txt
 
 Eu recomendo olhar o código nesse site (ou no meu vercel!):
 https://onecompiler.com/html/44gnv4e5a
