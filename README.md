@@ -13,4 +13,5 @@ Fui escrevendo o código junto com IA, para poder pegar o "escrever" e também p
 ver como tudo funciona :)
 
 O código sem nada escrito está em index.html
+
 O código com anotações está em chris.html (o que usei para "estudar")
