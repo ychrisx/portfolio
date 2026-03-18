@@ -1,4 +1,4 @@
-# portfólio
+# PORTFÓLIO
 Eae pessoal, tudo certo? Ao longo do código vou deixar 
 umas coisas anotadas que é mais para mim mesmo, para poder
 ir pegando o jeito da coisa. Também quis dar uma dificultada para
