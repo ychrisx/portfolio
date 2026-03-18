@@ -1,23 +1,27 @@
-<!DOCTYPE html>
-<html lang="pt">
+<!DOCTYPE html> <!-- define que o documento é HTML5 -->
+<html lang="pt"> <!-- define o idioma como português -->
 
 <head>
-    <meta charset="UTF-8">
-    <title>Meu Portfólio</title>
+    <meta charset="UTF-8"> <!-- permite usar acentos e caracteres especiais -->
+    <title>Meu Portfólio</title> <!-- nome da aba do navegador -->
 
+    <!-- importa o Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <!-- configuração personalizada do Tailwind para a animação do meu nome -->
     <script>
     tailwind.config = {
         theme: {
             extend: {
                 keyframes: {
+                    /* animação da mudança de cor */
                     bounceGlow: {
                         '0%, 100%': { transform: 'translateY(0)', color: '#df73ff' },
                         '50%': { transform: 'translateY(0px)', color: '#4b0082' }
                     }
                 },
                 animation: {
+                    /* define a animação e o tempo */
                     bounceGlow: 'bounceGlow 3s infinite'
                 }
             }
@@ -26,15 +30,17 @@
     </script>
     <style>
         body {
-            background-color: #ffffff;
+            background-color: #ffffff; /* fundo branco */
 
+            /* SVG de triângulos no fundo */
             background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='20,10 25,18 15,18' fill='%23d1d5db' fill-opacity='0.3'/%3E%3C/svg%3E");
 
-            background-size: 40px 40px;
+            background-size: 40px 40px; /* tamanho do padrão */
 
-            animation: moveTriangles 3s linear infinite;
+            animation: moveTriangles 3s linear infinite; /* anima o fundo */
         }
 
+        /* movimento do fundo */
         @keyframes moveTriangles {
             from {
                 background-position: 0 0;
@@ -43,14 +49,18 @@
                 background-position: 100px 100px;
             }
         }
+
+        /* remove barra de scroll (chrome) */
         ::-webkit-scrollbar {
             display: none;
         }
 
+        /* remove barra de scroll (firefox) */
         html {
             scrollbar-width: none;
         }
 
+        /* evita scroll lateral */
         body {
             overflow-x: hidden;
         }
@@ -58,18 +68,28 @@
 </head>
 
 <body>
+    <!-- PRIMEIRA TELA (Landing) -->
     <section class="h-screen flex items-center justify-center">
+        <!-- h-screen = altura da tela inteira -->
+        <!-- flex + center = centraliza tudo -->
+        
         <div class="text-center">
     <div class="text-center">
 
         <p class="text-lg text-gray-600 mb-2">
+            <!-- texto de introdução -->
             Eae galera, tudo certo? Bem-vindos ao meu Portfólio! 👋
         </p>
 
+        <!-- texto normal -->
         <h1 class="text-3xl md:text-5xl font-bold tracking-[-0em]">
             Meu nome é
+        </h1>
         
+        <!-- nome com animação letra por letra -->
         <h1 class="text-3xl md:text-5xl font-bold tracking-[-0.12em]">
+
+            <!-- cada letra é um span com animação -->
             <span class="animate-bounceGlow inline-block" style="animation-delay: 0s;">C</span>
             <span class="animate-bounceGlow inline-block" style="animation-delay: 0.05s;">h</span>
             <span class="animate-bounceGlow inline-block" style="animation-delay: 0.1s;">r</span>
@@ -79,17 +99,23 @@
             <span class="animate-bounceGlow inline-block" style="animation-delay: 0.3s;">i</span>
             <span class="animate-bounceGlow inline-block" style="animation-delay: 0.35s;">a</span>
             <span class="animate-bounceGlow inline-block" style="animation-delay: 0.4s;">n</span>
+
+            <!-- espaço entre nome e sobrenome -->
             <span class="animate-bounceGlow inline-block" style="animation-delay: 0.45s;"></span>
+            
             <span class="animate-bounceGlow inline-block" style="animation-delay: 0.5s;">R</span>
             <span class="animate-bounceGlow inline-block" style="animation-delay: 0.55s;">i</span>
             <span class="animate-bounceGlow inline-block" style="animation-delay: 0.6s;">c</span>
             <span class="animate-bounceGlow inline-block" style="animation-delay: 0.65s;">a</span>
             <span class="animate-bounceGlow inline-block" style="animation-delay: 0.7s;">r</span>
             <span class="animate-bounceGlow inline-block" style="animation-delay: 0.75s;">t</span>
-            <span class="animate-bounceGlow inline-block" style="animation-delay: 0.8s;">h</span>
-,
+            <span class="animate-bounceGlow inline-block" style="animation-delay: 0.8s;">h</span>,
+        </h1>
+        
+        <!-- apelido -->
         <h1 class="text-3xl md:text-5xl font-bold tracking-[-0em]">
             mas pode me chamar de 
+        </h1>
             
         <h1 class="text-3xl md:text-5xl font-bold tracking-[-0.12em]"> 
         <span>
@@ -101,22 +127,27 @@
         </span>!
         </h1>
 
+        <!-- cards (menu principal) -->
         <div class="mt-8">
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 justify-items-center">
+                <!-- grid responsivo -->
 
+                <!-- card 1 (quem sou eu) -->
                 <div class="bg-white border border-purple-400 p-6 rounded-lg hover:bg-purple-100 shadow-md hover:shadow-lg transition">
                     <h2 class="font-bold mb-2">Quem sou eu?</h2>
                     <div class="w-full h-[1px] bg-purple-400 mb-3"></div>
                     <p>Um poquinho de mim.</p>
                 </div>
 
+                <!-- card 2 (projetos) -->
                 <div class="bg-white border border-purple-400 p-6 rounded-lg hover:bg-purple-100 shadow-md hover:shadow-lg transition">
                     <h2 class="font-bold mb-2">Projetos</h2>
                     <div class="w-full h-[1px] bg-purple-400 mb-3"></div>
                     <p>Todos meus repositórios do GitHub e um pouco mais.</p>
                 </div>
 
+                <!-- card 3 (contato) -->
                 <div class="bg-white border border-purple-400 p-6 rounded-lg hover:bg-purple-100 shadow-md hover:shadow-lg transition">
                     <h2 class="font-bold mb-2">Contato</h2>
                     <div class="w-full h-[1px] bg-purple-400 mb-3"></div>
@@ -128,21 +159,29 @@
         </div>
 
     </div>
+
+        <!-- indicador de scroll -->
         <p class="mt-10 text-gray-500 animate-bounce">
         ↓ role para ver mais
     </p>
+            
     </section>
-        </div>
+
+     <!-- SEGUNDA PARTE DO SITE -->
     <section class="min-h-screen px-6 py-20">
 
+        <!-- QUEM SOU EU -->
         <div id="quem" class="max-w-4xl mx-auto mb-20">
-
+            <!-- id permite navegação via clique -->
+            
             <h2 class="text-purple-500 font-bold mb-6 text-lg">QUEM SOU EU?</h2>
 
+            <!-- foto -->
             <div class="mb-6 flex justify-center">
                 <img src="https://media.licdn.com/dms/image/v2/D4D03AQHicSNAp2qggw/profile-displayphoto-crop_800_800/B4DZyfJqd2JEAI-/0/1772196638547?e=1775692800&v=beta&t=LlQObKyZPch_itCYCBtrq2YzZs5pBQhaUxfGmojRhpE" class="w-40 h-40 rounded-full object-cover border-2 border-purple-400">
             </div>
 
+            <!-- texto -->
             <p class="text-gray-800 leading-relaxed">
                 <span class="font-bold">Opa!</span> Meu nome é <span class="text-purple-500">Christian Ricarth</span>, tenho 17 anos e estou fazendo Engenharia da Computação na Universidade Presbiteriana Mackenzie.
                 <br><br>
@@ -157,10 +196,12 @@
 
         </div>
 
+        <!-- PROJETOS -->
         <div id="projetos" class="max-w-4xl mx-auto mb-20">
 
             <h2 class="text-purple-500 font-bold mb-6 text-lg">PROJETOS</h2>
 
+            <!-- link clicável -->
             <a href="https://github.com/ychrisx/portfolio" target="_blank"
             class="block bg-white border border-purple-400 p-6 rounded-lg hover:bg-purple-100 transition">
 
@@ -171,6 +212,7 @@
 
         </div>
 
+        <!-- CONTATOS -->
         <div id="contatos" class="max-w-4xl mx-auto">
 
             <h2 class="text-purple-500 font-bold mb-6 text-lg">CONTATOS</h2>
@@ -184,6 +226,10 @@
                 <p>Discord: <a href="https://discord.com/users/593864174979776512" target="_blank" class="text-purple-500">@_ychris_</a></p>
 
                 <p>Instagram: <a href="https://www.instagram.com/_ychris_/" target="_blank" class="text-purple-500">@_ychris_</a></p>
+
+                <p>Email Pessoal: <a target="_blank"    class="text-purple-500">christian.ricarth@gmail.com</a></p>
+
+                <p>Email EJEM: <a target="_blank"    class="text-purple-500">christian.ricarth@ejemmackenzie.com</a></p>
 
             </div>
 
